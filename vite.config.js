@@ -5,8 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true, // binds to 0.0.0.0, required for Render
-    port: 10000, // optional: specify a fixed port (Render scans this)
-    strictPort: true, // ensures the specified port is used
-  }
+    host: true,
+    port: 10000,
+    strictPort: true,
+    allowedHosts: ['mernfrontend-1-o7zj.onrender.com'], // 👈 Add your Render frontend domain here
+  },
 });
